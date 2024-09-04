@@ -33,31 +33,133 @@ function App() {
   return (
     <div className="App">
 
-      <nav style={{ marginTop: '30px', display: 'flex', justifyContent: 'space-evenly' }}>
-        <button onClick={() => setPagina('home')}>Home</button>
-        <button onClick={() => setPagina('quienes-somos')}>Quiénes Somos</button>
-        <button onClick={() => setPagina('reservas')}>Reservas</button>
-        <button onClick={() => setPagina('contacto')}>Contacto</button>
-      </nav>
+<nav style={{
+  marginTop: '10px',
+  display: 'flex',
+  justifyContent: 'space-evenly',
+  padding: '15px',
+  borderRadius: '10px',
+  boxShadow: '3px 4px 24px -1px rgba(0,0,0,0.75)',
+  mozBoxShadow:'3px 4px 24px -1px rgba(0,0,0,0.75)',
+  webkitBoxShadow:'3px 4px 24px -1px rgba(0,0,0,0.75)',
+  width: '90%',
+  marginLeft:' 5%',
+
+}}>
+  <button style={{
+    background: 'transparent',
+    border: '2px solid white',
+    borderRadius: '10px',
+    color: 'white',
+    fontSize: '16px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, color 0.3s',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = 'white';
+    e.target.style.color = '#ff7e5f';
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = 'transparent';
+    e.target.style.color = 'white';
+  }}
+  onClick={() => setPagina('home')}>
+    Home
+  </button>
+
+  <button style={{
+    background: 'transparent',
+    border: '2px solid white',
+    borderRadius: '10px',
+    color: 'white',
+    fontSize: '16px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, color 0.3s',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = 'white';
+    e.target.style.color = '#ff7e5f';
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = 'transparent';
+    e.target.style.color = 'white';
+  }}
+  onClick={() => setPagina('quienes-somos')}>
+    Quiénes Somos
+  </button>
+
+  <button style={{
+    background: 'transparent',
+    border: '2px solid white',
+    borderRadius: '10px',
+    color: 'white',
+    fontSize: '16px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, color 0.3s',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = 'white';
+    e.target.style.color = '#ff7e5f';
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = 'transparent';
+    e.target.style.color = 'white';
+  }}
+  onClick={() => setPagina('reservas')}>
+    Reservas
+  </button>
+
+  <button style={{
+    background: 'transparent',
+    border: '2px solid white',
+    borderRadius: '10px',
+    color: 'white',
+    fontSize: '16px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, color 0.3s',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = 'white';
+    e.target.style.color = '#ff7e5f';
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = 'transparent';
+    e.target.style.color = 'white';
+  }}
+  onClick={() => setPagina('contacto')}>
+    Contacto
+  </button>
+</nav>
+
+
       
       <div className="container" style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', borderRadius: '8px' }}>
     {pagina === 'home' && (
         <div>
-            <h2 style={{ color: 'white', marginBottom: '10px', fontSize: '30px', marginTop: '10px' }}>¡Bienvenido a Veteriland!</h2>
+            <h2 style={{ color: 'white', marginBottom: '10px', fontSize: '30px', marginTop: '10px', fontWeight:'bold' }}>¡Bienvenido a Veteriland!</h2>
             <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
                 ¡Nos alegra que estés aquí! En Veteriland, somos más que una simple clínica: somos un equipo apasionado y dedicado al bienestar de tus mascotas. Creemos que cada animal merece el mejor cuidado, y estamos aquí para brindárselo.
             </p>
+            <p style={{ color: 'white', marginBottom: '15px', fontSize: '22px', fontWeight:'bolder', marginTop:'25px' }}>¿Por Qué Elegirnos?</p>
+           
+            <div style={{ display: 'flex', flexDirection: 'row'}}>
             <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
-                ¿Por Qué Elegirnos?
-
-                - Expertos en Cuidado Animal: Nuestro equipo de veterinarios altamente calificados y amantes de los animales está listo para ofrecer atención de calidad a tus peludos, escamosos o emplumados.
-
-                - Servicios Integrales: Desde consultas de rutina hasta tratamientos especializados, ofrecemos una amplia gama de servicios para asegurarnos de que tu mascota esté sana y feliz.
-
-                - Ambiente Acogedor: En nuestra clínica, cada mascota es tratada como parte de nuestra familia. Nos esforzamos por crear un ambiente cómodo y seguro para que tanto tú como tu mascota se sientan a gusto.
+                <span style={{ fontWeight: 'bolder' }}> - Expertos en Cuidado Animal:</span> Nuestro equipo de veterinarios altamente calificados y amantes de los animales está listo para ofrecer atención de calidad a tus peludos, escamosos o emplumados.
+            </p>
+            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
+            <span style={{ fontWeight: 'bolder' }}> - Servicios Integrales:</span> Desde consultas de rutina hasta tratamientos especializados, ofrecemos una amplia gama de servicios para asegurarnos de que tu mascota esté sana y feliz.
+            </p>
+            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
+              <span style={{ fontWeight: 'bolder' }}>- Ambiente Acogedor:</span>  En nuestra clínica, cada mascota es tratada como parte de nuestra familia. Nos esforzamos por crear un ambiente cómodo y seguro para que tanto tú como tu mascota se sientan a gusto.
                 ¡Agenda Tu Cita Hoy!
             </p>
-            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>¡Tu viaje hacia la salud y felicidad de tu mascota comienza aquí!</p>
+            </div>
+            
+            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px',marginTop: '20px;' }}>¡Tu viaje hacia la salud y felicidad de tu mascota comienza aquí!</p>
         </div>
     )}
 </div>
