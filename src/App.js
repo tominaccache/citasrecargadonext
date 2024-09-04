@@ -32,8 +32,8 @@ function App() {
 
   return (
     <div className="App">
-      <Titulo />
-      <nav>
+
+      <nav style={{ marginTop: '30px', display: 'flex', justifyContent: 'space-evenly' }}>
         <button onClick={() => setPagina('home')}>Home</button>
         <button onClick={() => setPagina('quienes-somos')}>Quiénes Somos</button>
         <button onClick={() => setPagina('reservas')}>Reservas</button>
@@ -43,12 +43,11 @@ function App() {
       <div className="container" style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', borderRadius: '8px' }}>
     {pagina === 'home' && (
         <div>
-            <h2 style={{ color: 'white', marginBottom: '15px' }}>Bienvenido a la página principal</h2>
-            <p style={{ color: 'white', marginBottom: '10px' }}>¡Bienvenido a Veteriland!</p>
-            <p style={{ color: 'white', marginBottom: '10px' }}>
+            <h2 style={{ color: 'white', marginBottom: '10px', fontSize: '30px', marginTop: '10px' }}>¡Bienvenido a Veteriland!</h2>
+            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
                 ¡Nos alegra que estés aquí! En Veteriland, somos más que una simple clínica: somos un equipo apasionado y dedicado al bienestar de tus mascotas. Creemos que cada animal merece el mejor cuidado, y estamos aquí para brindárselo.
             </p>
-            <p style={{ color: 'white', marginBottom: '10px' }}>
+            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
                 ¿Por Qué Elegirnos?
 
                 - Expertos en Cuidado Animal: Nuestro equipo de veterinarios altamente calificados y amantes de los animales está listo para ofrecer atención de calidad a tus peludos, escamosos o emplumados.
@@ -58,7 +57,7 @@ function App() {
                 - Ambiente Acogedor: En nuestra clínica, cada mascota es tratada como parte de nuestra familia. Nos esforzamos por crear un ambiente cómodo y seguro para que tanto tú como tu mascota se sientan a gusto.
                 ¡Agenda Tu Cita Hoy!
             </p>
-            <p style={{ color: 'white', marginBottom: '10px' }}>¡Tu viaje hacia la salud y felicidad de tu mascota comienza aquí!</p>
+            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>¡Tu viaje hacia la salud y felicidad de tu mascota comienza aquí!</p>
         </div>
     )}
 </div>
@@ -73,6 +72,7 @@ function App() {
 
         {pagina === 'reservas' && (
           <div className="row">
+                  <Titulo />
             <HacerCita agregarCita={agregarCita} />
             <ListaCitas citas={citas} eliminarCita={eliminarCita} />
           </div>
