@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import './index.css';
+//import imagenConejo from './public/imagenConejo.png';
 import HacerCita from './components/HacerCita/HacerCita';
 import ListaCitas from './components/ListaCitas/ListaCitas';
 import Titulo from './components/Titulo/Titulo';
@@ -33,29 +34,8 @@ function App() {
   return (
     <div className="App">
 
-<nav style={{
-  marginTop: '10px',
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  padding: '15px',
-  borderRadius: '10px',
-  boxShadow: '3px 4px 24px -1px rgba(0,0,0,0.75)',
-  mozBoxShadow:'3px 4px 24px -1px rgba(0,0,0,0.75)',
-  webkitBoxShadow:'3px 4px 24px -1px rgba(0,0,0,0.75)',
-  width: '90%',
-  marginLeft:' 5%',
-
-}}>
-  <button style={{
-    background: 'transparent',
-    border: '2px solid white',
-    borderRadius: '10px',
-    color: 'white',
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s, color 0.3s',
-    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
-  }}
+<nav className='nav'>
+  <button className='botonnav'
   onMouseEnter={(e) => {
     e.target.style.backgroundColor = 'white';
     e.target.style.color = '#ff7e5f';
@@ -68,16 +48,7 @@ function App() {
     Home
   </button>
 
-  <button style={{
-    background: 'transparent',
-    border: '2px solid white',
-    borderRadius: '10px',
-    color: 'white',
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s, color 0.3s',
-    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
-  }}
+  <button className='botonnav' 
   onMouseEnter={(e) => {
     e.target.style.backgroundColor = 'white';
     e.target.style.color = '#ff7e5f';
@@ -90,16 +61,7 @@ function App() {
     Quiénes Somos
   </button>
 
-  <button style={{
-    background: 'transparent',
-    border: '2px solid white',
-    borderRadius: '10px',
-    color: 'white',
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s, color 0.3s',
-    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
-  }}
+  <button className='botonnav'
   onMouseEnter={(e) => {
     e.target.style.backgroundColor = 'white';
     e.target.style.color = '#ff7e5f';
@@ -112,16 +74,7 @@ function App() {
     Reservas
   </button>
 
-  <button style={{
-    background: 'transparent',
-    border: '2px solid white',
-    borderRadius: '10px',
-    color: 'white',
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s, color 0.3s',
-    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)'
-  }}
+  <button className='botonnav' 
   onMouseEnter={(e) => {
     e.target.style.backgroundColor = 'white';
     e.target.style.color = '#ff7e5f';
@@ -140,26 +93,26 @@ function App() {
       <div className="container" style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', borderRadius: '8px' }}>
     {pagina === 'home' && (
         <div>
-            <h2 style={{ color: 'white', marginBottom: '10px', fontSize: '30px', marginTop: '10px', fontWeight:'bold' }}>¡Bienvenido a Veteriland!</h2>
-            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
-                ¡Nos alegra que estés aquí! En Veteriland, somos más que una simple clínica: somos un equipo apasionado y dedicado al bienestar de tus mascotas. Creemos que cada animal merece el mejor cuidado, y estamos aquí para brindárselo.
-            </p>
-            <p style={{ color: 'white', marginBottom: '15px', fontSize: '22px', fontWeight:'bolder', marginTop:'25px' }}>¿Por Qué Elegirnos?</p>
+            <h2 className='titulo'>¡Bienvenido a Veteriland!</h2>
+            <h3 className='subtitulo-home'>
+            ¡Nos encanta darte la bienvenida a Veteriland! Aquí, no solo encontrarás una clínica veterinaria, sino un equipo comprometido y apasionado por el bienestar de tus fieles compañeros. Cada día trabajamos con dedicación para asegurarnos de que cada mascota reciba la atención que merece, porque entendemos que son parte fundamental de tu familia. Desde chequeos rutinarios hasta tratamientos especializados, estamos preparados para ofrecer el mejor cuidado posible. En Veteriland, no solo tratamos a las mascotas, sino que las acompañamos en cada etapa de su vida para que puedan vivir felices y saludables.
+            </h3>
+            <p className='pregunta2-home'>¿Por Qué Elegirnos?</p>
            
             <div style={{ display: 'flex', flexDirection: 'row'}}>
-            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
-                <span style={{ fontWeight: 'bolder' }}> - Expertos en Cuidado Animal:</span> Nuestro equipo de veterinarios altamente calificados y amantes de los animales está listo para ofrecer atención de calidad a tus peludos, escamosos o emplumados.
+            <p className='textos-home'>
+                <span className='span-home'> - Expertos en Cuidado Animal:</span> Nuestro equipo de veterinarios altamente calificados y amantes de los animales está listo para ofrecer atención de calidad a tus peludos, escamosos o emplumados.
             </p>
-            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
-            <span style={{ fontWeight: 'bolder' }}> - Servicios Integrales:</span> Desde consultas de rutina hasta tratamientos especializados, ofrecemos una amplia gama de servicios para asegurarnos de que tu mascota esté sana y feliz.
+            <p className='textos-home'>
+            <span className='span-home'> - Servicios Integrales:</span> Desde consultas de rutina hasta tratamientos especializados, ofrecemos una amplia gama de servicios para asegurarnos de que tu mascota esté sana y feliz.
             </p>
-            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px' }}>
-              <span style={{ fontWeight: 'bolder' }}>- Ambiente Acogedor:</span>  En nuestra clínica, cada mascota es tratada como parte de nuestra familia. Nos esforzamos por crear un ambiente cómodo y seguro para que tanto tú como tu mascota se sientan a gusto.
+            <p className='textos-home'>
+              <span className='span-home'>- Ambiente Acogedor:</span>  En nuestra clínica, cada mascota es tratada como parte de nuestra familia. Nos esforzamos por crear un ambiente cómodo y seguro para que tanto tú como tu mascota se sientan a gusto.
                 ¡Agenda Tu Cita Hoy!
             </p>
             </div>
             
-            <p style={{ color: 'white', marginBottom: '10px', fontSize: '15px',marginTop: '20px;' }}>¡Tu viaje hacia la salud y felicidad de tu mascota comienza aquí!</p>
+            <p className='textofinal-home' >¡Tu viaje hacia la salud y felicidad de tu mascota comienza aquí!</p>
         </div>
     )}
 </div>
@@ -167,8 +120,13 @@ function App() {
 
         {pagina === 'quienes-somos' && (
           <div>
-            <h2>Quiénes Somos</h2>
-            <p>Somos una empresa dedicada a la gestión de citas para mascotas.</p>
+            <h2 className='titulo'>Quiénes Somos</h2>
+            <p className='texto-quienessomos'>Somos una empresa líder en la gestión de citas para mascotas, dedicada a facilitar el cuidado y bienestar de tus compañeros peludos. Entendemos que las mascotas son parte esencial de tu familia, y por eso nos enfocamos en ofrecer una plataforma intuitiva y eficiente para gestionar todas sus necesidades de salud y cuidado. Nuestro equipo, compuesto por profesionales con experiencia en el ámbito veterinario y tecnológico, trabaja incansablemente para que puedas programar citas con facilidad, desde chequeos regulares hasta tratamientos especializados. Nos enorgullece ser una solución confiable que te permite conectar con los mejores veterinarios, asegurando que tu mascota reciba la atención adecuada en el momento justo. En cada paso, nos guiamos por la pasión y el compromiso de mejorar la calidad de vida de los animales y facilitar la vida de sus dueños. Ya sea que necesites una consulta de rutina, una intervención quirúrgica o simplemente un control preventivo, estamos aquí para hacerlo más simple, rápido y eficiente. ¡Tu mascota es nuestra prioridad!</p>
+            <div>
+              <p className='texto-quienessomos'>Nuestro mejor veterinario:</p>
+              <img  src="/imagenConejo.png" alt="imagen del mejor veterinario"
+               style={{width: '20%'}}/>
+            </div>        
           </div>
         )}
 
@@ -182,15 +140,16 @@ function App() {
 
         {pagina === 'contacto' && (
           <div>
-            <h2>Contacto</h2>
-            <form>
-              <label>Nombre</label>
+            <h2 className='titulo'>Contacto</h2>
+            <p className='texto-quienessomos'>En esta sección, puedes ponerte en contacto con nosotros completando el formulario a continuación. Solo es necesario proporcionar tu nombre, correo electrónico y mensaje, y nos aseguraremos de responder lo antes posible. ¡Estamos aquí para ayudarte!</p>
+            <form className='form-contacto'>
+              <label>Nombre *</label>
               <input type="text" name="nombre" className="u-full-width" required />
 
-              <label>Email</label>
+              <label>Email *</label>
               <input type="email" name="email" className="u-full-width" required />
 
-              <label>Mensaje</label>
+              <label>Mensaje *</label>
               <textarea name="mensaje" className="u-full-width" required></textarea>
 
               <button type="submit" className="u-full-width button-primary">

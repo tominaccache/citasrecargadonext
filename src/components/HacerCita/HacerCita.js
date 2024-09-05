@@ -45,7 +45,8 @@ const enviarFormulario = (evento) => {
 
 
   return (
-    <div className="one-half column">
+    <div className="one-half column" style={{
+    width: '30%', marginLeft: '10%'}}>
       <h2>Crear mi cita</h2>
       <form onSubmit={enviarFormulario}>
         <label>Nombre Mascota</label>
