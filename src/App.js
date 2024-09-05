@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+
 import './App.css';
 import './index.css';
-//import imagenConejo from './public/imagenConejo.png';
+import React, { useState, useEffect } from 'react';
 import HacerCita from './components/HacerCita/HacerCita';
 import ListaCitas from './components/ListaCitas/ListaCitas';
 import Titulo from './components/Titulo/Titulo';
@@ -12,8 +12,20 @@ function App() {
     { id: 2, mascota: 'Sifon', propietario: 'Flecha', fecha: '2023-08-05', hora: '09:24', sintomas: 'Duerme mucho' },
     { id: 3, mascota: 'Floki', propietario: 'Ari', fecha: '2023-08-05', hora: '16:15', sintomas: 'No está comiendo' }
   ]);
+    
+  //PARA QUE AL CARGAR LA PÁGINA, SE QUEDE EN LA PÁGINA Y NO VUELVA A LA HOME(utilizar useEffect)
+  
+  // Leer la página actual desde localStorage o usar 'home' por defecto
+    const [pagina, setPagina] = useState(() => {
+      return localStorage.getItem('pagina') || 'home';
+    });
+  
+    useEffect(() => {
+      // Guardar la página actual en localStorage cuando cambie
+      localStorage.setItem('pagina', pagina);
+    }, [pagina]);
 
-  const [pagina, setPagina] = useState('home'); // Estado para manejar la navegación
+
 
   const agregarCita = (nuevaCita) => {
     const confirmacion = window.confirm('¿Está seguro de que desea agregar esta cita?');
