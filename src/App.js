@@ -101,13 +101,13 @@ function App() {
            
             <div style={{ display: 'flex', flexDirection: 'row'}}>
             <p className='textos-home'>
-                <span className='span-home'> - Expertos en Cuidado Animal:</span> Nuestro equipo de veterinarios altamente calificados y amantes de los animales está listo para ofrecer atención de calidad a tus peludos, escamosos o emplumados.
+                <span className='span-home'> - Expertos en Cuidado Animal:</span> <br></br> Nuestro equipo de veterinarios altamente calificados y amantes de los animales está listo para ofrecer atención de calidad a tus peludos, escamosos o emplumados.
             </p>
             <p className='textos-home'>
-            <span className='span-home'> - Servicios Integrales:</span> Desde consultas de rutina hasta tratamientos especializados, ofrecemos una amplia gama de servicios para asegurarnos de que tu mascota esté sana y feliz.
+            <span className='span-home'> - Servicios Integrales:</span><br></br> Desde consultas de rutina hasta tratamientos especializados, ofrecemos una amplia gama de servicios para asegurarnos de que tu mascota esté sana y feliz.
             </p>
             <p className='textos-home'>
-              <span className='span-home'>- Ambiente Acogedor:</span>  En nuestra clínica, cada mascota es tratada como parte de nuestra familia. Nos esforzamos por crear un ambiente cómodo y seguro para que tanto tú como tu mascota se sientan a gusto.
+              <span className='span-home'>- Ambiente Acogedor:</span> <br></br> En nuestra clínica, cada mascota es tratada como parte de nuestra familia. Nos esforzamos por crear un ambiente cómodo y seguro para que tanto tú como tu mascota se sientan a gusto.
                 ¡Agenda Tu Cita Hoy!
             </p>
             </div>
